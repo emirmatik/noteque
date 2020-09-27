@@ -1,11 +1,13 @@
 # Full Stack Note App
-🔒 Signup - Login feature
-📌 Pin your notes 
-👶 Easy to use
+🔒 Signup - Login feature </br>
+📌 Pin your notes </br>
+👶 Easy to use </br>
 
 ## Todo List
 [ ] Ability to attach medias in a note
 [ ] Add categories for notes and maybe we can switch between category tabs
+
+**Note: use `npm install` to install dependencies first**
 
 ## Available Scripts
 
