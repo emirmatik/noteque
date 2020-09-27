@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Full Stack Note App
+-👤🔒 Signup - Login feature
+- Pin your notes 
+
+## Todo List
+[ ] Ability to attach medias in a note
+[ ] Add categories for notes and maybe we can switch between category tabs
 
 ## Available Scripts
 
