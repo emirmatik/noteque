@@ -4,8 +4,8 @@
 👶 Easy to use </br>
 
 ## Todo List
-[ ] Ability to attach medias in a note
-[ ] Add categories for notes and maybe we can switch between category tabs
+[ ] Ability to attach medias in a note </br>
+[ ] Add categories for notes and maybe we can switch between category tabs </br>
 
 **Note: use `npm install` to install dependencies first**
 
