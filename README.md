@@ -1,6 +1,7 @@
 # Full Stack Note App
--👤🔒 Signup - Login feature
-- Pin your notes 
+🔒 Signup - Login feature
+📌 Pin your notes 
+👶 Easy to use
 
 ## Todo List
 [ ] Ability to attach medias in a note
