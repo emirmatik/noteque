@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
+#edge-shape {
+    position: absolute;
+    right: -12rem;
+    top: -20rem;
+    width: 50rem;
+    height: 65rem;
+    background: linear-gradient(40deg, #ffecaed7, rgb(155, 122, 85));
+    transform: rotate(45deg);
+    border-radius: 50%;
+}
+.navbar.website-navbar {
+   width: 80%;
+   height: 100%;
+   margin: 0 auto;
+   padding: 1.5rem 0;
+}
+.navbar-div {
+    position: sticky;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    transform: translateX(-10%);
+    transition: .3s ease all;
+    z-index: 999;
+}
+.navbar-blackbg {
+    background-color: rgba(0, 0, 0, 0.719);
+    color: #fdfdfd;
+}
+
+@media screen and (max-width: 700px) {
+#edge-shape {
+    right: 0rem;
+    top: 0;
+    width: 100vw;
+    height: 95%;
+    background: linear-gradient(130deg, #ffecaed7, rgb(155, 122, 85));
+    border-radius: 0 0 10% 10%;
+    transform: rotate(0deg);
+}
+#logo {
+    font-size:1.1rem
+}
+.navbar-div {
+    transform: translateX(-2.5%);
+}
+.navbar.website-navbar {
+   width: 95%;
+   margin: 0 auto;
+   padding: 1.5rem 0;
+}
+.website-nav-links {
+    width: unset;
+    justify-content: unset;   
+}
+.nav-link {
+    margin-left: 1.5rem;
+  }
+}
+
+/**** Banner Start *****/
+
+.signin-btn {
+  border: 1px solid rgb(253, 84, 84);
+  background-color: rgb(255, 142, 142);
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  transition: .3s ease all;
+  color: white;
+}
+.signin-btn:hover {
+    background-color: rgb(255, 155, 155);
+}
+#banner {
+    width: 100%;
+    height: 100%;
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+.banner-text {
+    z-index: 500;
+}
+.banner-text h1 {
+    font-size: 4.3rem;
+}
+#special-word {
+    font-weight: 400;
+    font-family: 'Leckerli One', cursive;
+}
+.banner-text p {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+.banner-btn {
+    margin-top: 15rem;
+    background: #ffecaed7;
+    border: 2px solid #ffc400d7;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: black;
+    transition: .3s ease all;
+}
+.banner-btn:hover {
+    background: #fdf0c3d7;
+}
+.banner-svg {
+    width: 40%;
+    height: 100%;
+    z-index: 2;
+}
+.banner-svg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+#banner {
+    padding: 0;
+    padding-bottom: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.banner-text {
+     width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+}
+.banner-svg {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+}
+
+/**** Banner End *****/
+
+/**** About Section Start *****/
+#about {
+    margin-top: 4rem;
+    padding: 5rem 0;
+    background-color: #ffe9d4;
+    border-radius: 2rem 2rem 0 0
+}
+.about-icons-div {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.about-icon-div {
+    min-width: 15%;
+}
+.about-icon {
+    margin-bottom: 2rem;
+    font-size: 3rem !important;
+}
+.about-video {
+    width: 50%;
+    height: 100%;
+    margin: 5rem auto;
+} 
+.about-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 2rem
+}
+
+@media screen and (max-width: 700px) {
+#about {
+    padding: 1rem 0;
+    border-radius: 1rem 1rem 0 0
+}
+.about-icons-div {
+    width: 100%;
+    display: unset;
+}
+.about-icon-div {
+    width: 50%;
+    background: #fdfdfd;
+    margin: 2rem auto;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+.about-icon-div p {
+   text-align: center;
+}
+.about-icon {
+    margin-bottom: 1rem;
+    font-size: 3rem !important;
+}
+.about-video {
+    width: 95%;
+    margin: 2rem auto;
+} 
+.about-video video {
+    border-radius: 1rem
+}
+}
+
+/**** About Section End *****/
+
+
+/**** Footer Start *****/
+#footer {
+    padding: 1.5rem 0;
+    text-align: center;
+}
+#footer a {
+    margin: 0 .5rem;
+    color: #4f89e7;
+    text-decoration: none;
+}
+#footer a:hover {
+    text-decoration: underline;
+}
+
+
+/**** Footer End *****/
+
+/**** Sign Forms Start *****/
+.signup-container {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-div {
+    position: relative;
+    width: 70%;
+    min-height: 60%;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 1rem;
+    overflow: hidden;
+    z-index: 999;
+}
+#back-to-home {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.signup-svg {
+    background: linear-gradient(90deg, #699cee,rgb(89, 89, 201));  
+    border-right: 2px solid black;
+    padding: 0 3rem;
+    width: 50%;
+    min-height: 100%;
+}
+.signup-svg img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; 
+}
+.signup-form {
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem;
+    background: #F5F5F1;
+}
+.signup-form h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+.form-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: .8rem 0;
+}
+.form-group > label {
+    display: flex;
+    align-items: center;
+}
+.form-group > input{
+    border: none;
+    background: none;
+    border-bottom: 1px solid black;
+    padding: .25rem;
+    font-size: 1.1rem;
+}
+
+#sign-error {
+    margin-bottom: 1rem;
+    color: tomato;
+}
+.signup-btn {
+    border: none;
+    background: none;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    padding: .5rem;
+    border: 2px solid #699cee;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.signup-btn:hover {
+    background: #699cee;
+    color: white;
+}
+.baloon {
+    position: absolute;
+    border-radius: 50%;
+}
+.baloon1 {
+    bottom: 10%;
+    left: 5%;
+    width: 5rem;
+    height: 5rem;
+    background: #699cee;
+}
+.baloon2 {
+    bottom: 10%;
+    right: 15%;
+    width: 3rem;
+    height: 3rem;
+    background: #ebd86c;
+}
+.baloon3 {
+    top: 10%;
+    left: 5%;
+    width: 10rem;
+    height: 10rem;
+    background: #ebd86c;
+}
+.baloon4 {
+    top: 10%;
+    right: 15%;
+    width: 15rem;
+    height: 15rem;
+    background: #968bfc;
+}
+
+.login-svg {
+    background: linear-gradient(45deg, #e28e92,rgb(255, 200, 148));  
+}
+
+.login-btn {
+    border: 2px solid #e28e92;
+}
+.login-btn:hover {
+    background: #e28e92;
+}
+.loginbaloon1 {
+    bottom: 10%;
+    left: 5%;
+    width: 5rem;
+    height: 5rem;
+    background: #ecc8b4;
+}
+.loginbaloon2 {
+    bottom: 10%;
+    right: 15%;
+    width: 3rem;
+    height: 3rem;
+    background: #eb9f6c;
+}
+.loginbaloon3 {
+    top: -5rem;
+    left: -5rem;
+    width: 25rem;
+    height: 25rem;
+    background: #ce496a9a;
+}
+.loginbaloon4 {
+    top: 10%;
+    right: 15%;
+    width: 15rem;
+    height: 15rem;
+    background: #fc8b91;
+}
+.disabled-sign-btn {
+    border: 2px solid rgb(194, 194, 194);
+}
+.disabled-sign-btn:hover {
+    background: #F5F5F1;
+    color: rgb(194, 194, 194);
+    cursor: unset;
+}
+
+@media screen and (max-width: 700px) {
+.signup-div {
+    min-width: 95%;
+    flex-direction: column;
+}
+#back-to-home {
+    color: black !important;
+}
+.signup-svg {
+    display: none;
+}
+.signup-form {
+    width:100%;
+    padding: 1.5rem;
+    background: #F5F5F1;
+}
+.signup-form h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+.form-group {
+    margin: .5rem 0;
+}
+.form-group > input{
+    font-size: 1rem;
+}
+#sign-error {
+    margin-bottom: 1rem;
+    color: tomato;
+}
+.signup-btn {
+    font-size: 1rem;
+    padding: .5rem;
+}
+.baloon1 {
+    bottom: 2%;
+    left: 2%;
+}
+.baloon2 {
+    bottom: 5%;
+    right: 5%;
+}
+.baloon3 {
+    top: -5rem;
+    left: -5rem;
+}
+.baloon4 {
+    top: 4%;
+    right: -1rem;
+}
+.loginbaloon1 {
+    bottom: 5%;
+    left: 5%;
+}
+.loginbaloon3 {
+    top: -5rem;
+    left: -5rem;
+    width: 15rem;
+    height: 15rem;
+}
+.loginbaloon4 {
+    top: 1%;
+    right: 2%;
+    width: 10rem;
+    height: 10rem;
+}
+}
+/**** Sign Forms End *****/

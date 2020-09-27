@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
+
+/********** Navbar Start **************/
+.navbar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 0 ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo {
+  font-family: 'Ranchers', cursive;
+  display: flex;
+  align-items: center;
+  z-index: 999 !important;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+.nav-link {
+  cursor: pointer;
+  margin-left: 2rem;
+  text-decoration: none !important;
+}
+.new-note-btn {
+  border: none;
+  background: linear-gradient(to right, #5bcc6ea8, rgb(78, 240, 164));
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  color: rgb(66, 66, 66);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.new-note-btn:hover {
+  background: linear-gradient(to right, #6ce280a8, rgb(101, 248, 179));
+}
+.sign-btn {
+  border: none;
+  background: linear-gradient(150deg, #ec3636d7, rgba(238, 13, 43, 0.486));
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sign-btn:hover {
+  background: linear-gradient(150deg, #f14646d7, rgba(245, 32, 60, 0.486));
+}
+
+@media screen and (max-width: 700px) {
+.nav-links {
+  width: 100%;
+  justify-content: space-between;
+}
+.nav-link {
+  margin-left: .5rem;
+  }
+.new-note-btn, .sign-btn {
+  font-size: .8rem;
+  padding: .2rem .4rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  color: rgb(66, 66, 66);
+}
+.sign-btn {
+  color: white;
+}
+}
+
+/********** Navbar End **************/
+
+/********** Add Note Popup Start **************/
+.add-note-form-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.281);
+  z-index: 999;
+}
+.add-note-form {
+  position: fixed;
+  min-width: 35%;
+  min-height: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 1rem;
+  background: white;
+  box-shadow:
+  0  5px 10px rgba(154, 160, 185, 0.164),
+  0 15px 40px rgba(166, 173, 201, 0.281);
+}
+.add-note-form h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.add-note-form div {
+  display: flex;
+  flex-direction: column;
+  margin: .5rem auto;
+  width: 85%;
+}
+.add-note-form input, .add-note-form textarea {
+  border: none;
+  border-bottom: 1px solid black;
+  max-width: 100%;
+  max-height: 100%;
+  margin: .5rem 0; 
+  padding: .3rem;
+  font-size: 1.2rem;
+}
+.add-note-form textarea {
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  min-width: 100%;
+  min-height: 12rem;
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+#error {
+  margin: .5rem 0;
+  color: tomato;
+}
+#add-btn {
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1rem;
+  background: #42a853;
+  color: white;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+#add-btn:hover {
+  background: #5bcc6e;
+}
+
+@media screen and (max-width: 700px) {
+  .add-note-form div {
+  margin: .5rem auto;
+  width: 100%;
+}
+}
+/**************** Add note Popup End *****************/
+
+/**************** Notes Start *****************/
+.no-notes-text {
+  margin: 5rem auto;
+  font-size: 2rem;
+}
+.no-pinned-notes-text {
+  margin: 2rem auto;
+  font-size: 1.1rem;
+}
+.no-notes-text span {
+  font-family: 'Leckerli One', cursive;
+  font-weight: 300;
+}
+.notes-div-header-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem ;
+}
+#notes-search {
+  padding: .5rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 1.1rem;
+}
+#notes-div-header {
+  font-size: 3rem;
+}
+.notes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.note {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 12rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: rgb(247, 247, 202);
+  box-shadow:
+  0  5px 10px rgba(200, 212, 164, 0.164),
+  0 15px 40px rgba(216, 240, 175, 0.281);
+  cursor: pointer;
+  /* transition-delay: 1s; */
+  /* transition: .1s ease all; */
+}
+/* .note:hover {
+  transform: scale(1.05);
+} */
+.note-title-underline {
+  border: none;
+  max-width: 75%;
+  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+}
+.note-title {
+  font-size: 1.3em;
+  margin-bottom: .3rem;
+}
+#pin-icon {
+  font-size: 1.9rem;
+  transition: .3s ease all;
+}
+#pin-icon:hover {
+  transform: scale(1.1);
+}
+
+.note-desc {
+  word-break: break-all;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.note-date {
+  font-size: .9rem;
+  font-style: italic;
+}
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#delete-icon {
+  font-size: 1.9rem;
+  color: rgb(218, 86, 62);
+  /* cursor: pointer; */
+  transition: .3s ease all;
+}
+#delete-icon:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 700px) {
+.no-notes-text {
+  margin: 2rem auto;
+  font-size: 1rem;
+}
+.note {
+  width: 100%;
+  margin: .5rem 0 ;
+}
+#notes-search {
+  width: 40%;
+  padding: .25rem;
+  font-size: 1rem;
+}
+#notes-div-header {
+  font-size: 1.6rem;
+}
+}
+
+/**************** Notes End *****************/
+
+/**************** Popup Note Start *****************/
+.popup-note {
+  position: relative;
+  width: 50%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgb(247, 247, 202);
+}
+.popup-note textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 58%;
+  max-height: 58%;
+}
+.popup-note input:focus, .popup-note textarea:focus {
+   outline: none;
+}
+#popup-note-title {
+  max-width: 90%;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+}
+.popup-note-pin {
+  font-size: 2.3rem !important;
+}
+.popup-note-underline {
+  margin-top: 1rem;
+}
+#popup-note-desc {
+  font-size: 1.49rem;
+  border: none;
+  background: none;
+}
+.popup-note-bottom {
+ max-width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-top: 2rem;
+}
+#popup-note-date {
+  width: 20rem;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  text-align: center;
+  font-style: italic;
+}
+.buttons {
+  margin: 1rem 0;
+  margin-left: auto;
+  /* display: flex; */
+  /* align-items: center; */
+}
+.save-btn, #delete-btn {
+  padding: .5rem 1rem;
+  background: none;
+  border: none;
+  border-radius: .5rem;
+  font-size: 1.1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+.save-btn {
+  border: 2px solid rgb(49, 170, 240);
+}
+.disabled-btn {
+    border: 2px solid rgb(211, 211, 211);
+    cursor: unset;
+}
+.disabled-btn:hover {
+  background-color:  rgb(247, 247, 202) !important;
+  color: rgb(211, 211, 211) !important;
+}
+.save-btn:hover {
+  background-color:rgb(49, 170, 240);
+  color: white;
+}
+#delete-btn {
+  border:2px solid rgb(245, 113, 113);
+}
+#delete-btn:hover {
+  background-color:rgb(245, 113, 113);
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+.popup-note {
+  width: 95%;
+  height: 80%;
+  padding: 1.5rem;
+}
+#popup-note-title {
+  font-size: 2rem;
+}
+#popup-note-desc {
+  font-size: 1.3rem;
+}
+#popup-note-date {
+  width: 80%;
+  font-size: .8rem;
+}
+.save-btn, #delete-btn {
+  padding: .2rem .4rem;
+  font-size: 1.1rem;
+}
+}
+/**************** Popup Note End *****************/
