@@ -13,7 +13,6 @@ function Navbar() {
 
     useEffect(() => {
         function scrollEvent() {
-            console.log(window.scrollY)
             if (window.scrollY > 50) {
                 setBlackNav(true)
             } else {
