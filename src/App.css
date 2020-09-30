@@ -39,8 +39,55 @@ path {
   margin: 5rem auto;
 }
 
+/*   Loading page start    */
+
+#loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ffecaed7;
+}
+#loading-page h3 {
+  font-size: 2.1rem;
+}
+.loading-baloon1, .loading-baloon2 {
+  width: 3rem;
+  height: 3rem;
+  background: #ff932f;
+  border-radius: 50%;
+}
+.loading-baloon1 {
+  animation: loading-baloon-animation 1s ease-in-out alternate infinite;
+}
+.loading-baloon2 {
+  animation: loading-baloon-animation 1s .1s ease-in-out alternate infinite;
+}
+
+
+@keyframes loading-baloon-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/*    Loading page end    */
 @media screen and (max-width: 700px) {
   #root {
     width: 95%;
   }
+  #loading-page h3 {
+  font-size: 2rem;
+}
+  .loading-baloon1, .loading-baloon2 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 }
