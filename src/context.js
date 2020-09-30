@@ -38,7 +38,7 @@ class ContextProvider extends React.Component {
 
     render() {
         return (
-            <myContext.Provider value={{ ...this.state, setUser: this.setUser, logout: this.logout, changeElement: this.changeElement }} >
+            <myContext.Provider value={{ ...this.state, logout: this.logout, changeElement: this.changeElement }} >
                 { this.props.children}
             </myContext.Provider >
         )
