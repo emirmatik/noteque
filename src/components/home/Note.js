@@ -23,7 +23,6 @@ function Note({ note }) {
 
     const deleteSelectedNote = async () => {
         const newNotes = await deleteNote({ userID: user._id, noteID: note._id });
-        console.log(newNotes)
         changeElement({ notes: newNotes })
     }
 
