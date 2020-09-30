@@ -20,17 +20,14 @@ class ContextProvider extends React.Component {
             this.setState({ token })
             const user = await getUser(token);
             this.setState({ user, notes: user.notes })
+        } else {
+            this.setState({ user: "none" })
         }
-    }
-
-    // will be used while signing in / signing up
-    setUser = (user) => {
-        this.setState({ user })
     }
 
     logout = () => {
         localStorage.removeItem("token");
-        this.setState({ token: null, user: null })
+        this.setState({ token: null, user: "none" })
     }
 
     // will be used to set the state
@@ -51,4 +48,3 @@ class ContextProvider extends React.Component {
 const ContextConsumer = myContext.Consumer;
 
 export { myContext, ContextProvider, ContextConsumer }
-
